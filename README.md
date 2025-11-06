@@ -13,6 +13,79 @@ Hệ thống quản lý học tập (Language Center - MySQL) hỗ trợ quản 
 - MySQL / MariaDB
 - Visual Studio Code, MySQL Workbench
 
+## 3. Giao diện trang web (thay các ảnh cũ)
+
+Tôi đã xóa các ảnh cũ và thay thế bằng một chỗ dành cho ảnh giao diện trang web của bạn. Để hiển thị giao diện thật, upload ảnh chụp màn hình của trang vào `assets/images/` và đặt tên là `site-ui.png` (hoặc tên khác — báo cho tôi biết tên đó).
+
+Preview giao diện (click để đến trang chủ):
+
+[![Giao diện trang chủ](site-ui.png)](../../index.php)
+
+Ví dụ: nếu bạn upload `login.png`, `admin-dashboard.png`, `schedule.png`, tôi có thể tự động chèn từng ảnh vào các mục tương ứng (Trang đăng nhập, Trang quản trị viên, Trang lịch học).
+
+## 4. Cài đặt nhanh
+
+1) Cài XAMPP (https://www.apachefriends.org/download.html) — khuyến nghị PHP 8.x.
+
+2) Clone project vào `htdocs` của XAMPP:
+
+```bash
+cd C:\\xampp\\htdocs
+git clone https://github.com/Hung17082005/BTL_Quan_ly_hoc_tap.git
+```
+
+3) Khởi động Apache và MySQL trong XAMPP.
+
+4) Tạo database (ví dụ):
+
+```sql
+CREATE DATABASE IF NOT EXISTS quan_ly_doan_vien
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+```
+
+5) Cấu hình kết nối DB an toàn: chỉnh `db.php` hoặc dùng biến môi trường `.env` và đừng commit mật khẩu thật.
+
+Ví dụ mẫu `db.php`:
+
+```php
+<?php
+function getDbConnection() {
+    $servername = "localhost";
+    $username = "root";
+    $password = getenv('DB_PASSWORD') ?: 'YOUR_DB_PASSWORD';
+    $dbname = "btl";
+    $port = 3306;
+    $conn = mysqli_connect($servername, $username, $password, $dbname, $port);
+    if (!$conn) {
+        die("Kết nối database thất bại: " . mysqli_connect_error());
+    }
+    mysqli_set_charset($conn, "utf8");
+    return $conn;
+}
+?>
+```
+
+6) Truy cập hệ thống: http://localhost/btl/index.php?page=dashboard
+
+---
+
+Ghi chú: khi bạn upload ảnh giao diện, hoặc gửi tên file, tôi sẽ chèn ảnh đó vào README ở vị trí phù hợp.
+# Language Center — Hướng dẫn ảnh & cài đặt nhanh
+
+[![Language Center Logo](language-center-logo.png)](../../index.php)
+
+## 1. Giới thiệu
+
+Hệ thống quản lý học tập (Language Center - MySQL) hỗ trợ quản lý, giám sát và đánh giá hoạt động học tập cho học viên và giáo viên. File này mô tả nơi đặt ảnh minh họa chức năng và cách cấu hình nhanh để chạy hệ thống cục bộ.
+
+## 2. Công nghệ chính (gợi ý)
+
+- PHP (khuyến nghị PHP 8.x)
+- Apache (XAMPP)
+- MySQL / MariaDB
+- Visual Studio Code, MySQL Workbench
+
 ## 3. Hình ảnh các chức năng — ảnh hiện có trong `assets/images/`
 
 Dưới đây là các ảnh tìm thấy trong thư mục (không đệ quy):
