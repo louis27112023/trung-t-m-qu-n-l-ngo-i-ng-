@@ -163,22 +163,8 @@ Hệ thống quản lý học tập (Language Center - MySQL) này được xây
 
 Lưu ý: các thẻ ảnh trong file gốc trỏ tới tài nguyên bên ngoài. Nếu bạn có ảnh chụp màn hình, hãy đặt chúng vào `assets/images/` và đặt tên rõ ràng (ví dụ `login.png`, `admin-dashboard.png`, `schedule.png`, ...). Tôi để sẵn chỗ dành cho các ảnh mẫu bên dưới.
 
-🚀 3. Hình ảnh các chức năng (thay bằng ảnh của bạn)
 
-Trang đăng nhập
-[![Trang đăng nhập](../images/login.png)](../../index.php)
 
-Trang quản trị viên
-[![Trang quản trị viên](../images/admin-dashboard.png)](../../index.php)
-
-Trang lịch học
-[![Lịch học](../images/schedule.png)](../../index.php)
-
-Trang ghi chú
-[![Ghi chú](../images/notes.png)](../../index.php)
-
-Trang mục tiêu
-[![Mục tiêu](../images/goals.png)](../../index.php)
 
 ## ⚙️ 4. Cài đặt
 
