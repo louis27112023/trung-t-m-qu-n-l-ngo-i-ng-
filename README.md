@@ -1,3 +1,186 @@
+# Language Center — Hướng dẫn ảnh & cài đặt nhanh
+
+![Language Center Logo](language-center-logo.png)
+
+## 1. Giới thiệu
+
+Hệ thống quản lý học tập (Language Center - MySQL) hỗ trợ quản lý, giám sát và đánh giá hoạt động học tập cho học viên và giáo viên. File này mô tả nơi đặt ảnh minh họa chức năng và cách cấu hình nhanh để chạy hệ thống cục bộ.
+
+## 2. Công nghệ chính (gợi ý)
+
+- PHP (khuyến nghị PHP 8.x)
+- Apache (XAMPP)
+- MySQL / MariaDB
+- Visual Studio Code, MySQL Workbench
+
+## 3. Hình ảnh các chức năng — ảnh hiện có trong `assets/images/`
+
+Dưới đây là các ảnh tìm thấy trong thư mục (không đệ quy):
+
+- `language-center-logo.png`
+
+Preview:
+
+![language-center-logo.png](language-center-logo.png)
+
+Ghi chú: nếu bạn muốn gán ảnh vào mục chức năng cụ thể (ví dụ: `login.png` → "Trang đăng nhập"), upload ảnh đó vào `assets/images/` và báo tên file cho tôi — tôi sẽ cập nhật README để hiển thị theo từng chức năng.
+
+## 4. Cài đặt nhanh
+
+1) Cài XAMPP (https://www.apachefriends.org/download.html) — khuyến nghị PHP 8.x.
+
+2) Clone project vào `htdocs` của XAMPP:
+
+```bash
+cd C:\\xampp\\htdocs
+git clone https://github.com/Hung17082005/BTL_Quan_ly_hoc_tap.git
+```
+
+3) Khởi động Apache và MySQL trong XAMPP.
+
+4) Tạo database (ví dụ):
+
+```sql
+CREATE DATABASE IF NOT EXISTS quan_ly_doan_vien
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+```
+
+5) Cấu hình kết nối DB an toàn: chỉnh `db.php` hoặc dùng biến môi trường `.env` và đừng commit mật khẩu thật.
+
+Ví dụ mẫu `db.php`:
+
+```php
+<?php
+function getDbConnection() {
+    $servername = "localhost";
+    $username = "root";
+    $password = getenv('DB_PASSWORD') ?: 'YOUR_DB_PASSWORD';
+    $dbname = "btl";
+    $port = 3306;
+    $conn = mysqli_connect($servername, $username, $password, $dbname, $port);
+    if (!$conn) {
+        die("Kết nối database thất bại: " . mysqli_connect_error());
+    }
+    mysqli_set_charset($conn, "utf8");
+    return $conn;
+}
+?>
+```
+
+6) Truy cập hệ thống: http://localhost/btl/index.php?page=dashboard
+
+---
+
+Nếu bạn đã upload thêm ảnh, báo cho tôi tên file (hoặc chọn tự động: tôi sẽ quét và thêm vào README). Tôi có thể tự động sắp xếp chúng theo tên file nếu bạn muốn (ví dụ `login.png` → Trang đăng nhập).
+
+![Language Center Logo](language-center-logo.png)
+
+📖 1. Giới thiệu
+
+Hệ thống quản lý học tập (Language Center - MySQL) này được xây dựng để hỗ trợ quản lý, giám sát và đánh giá hoạt động học tập cho học viên và giáo viên. README này mô tả cách cài đặt, cấu hình cơ bản và nơi đặt ảnh minh họa chức năng.
+
+🔧 2. Các công nghệ (gợi ý)
+
+- Hệ điều hành: Windows / Linux
+- PHP (khuyến nghị PHP 8.x)
+- Web server: Apache (XAMPP)
+- Cơ sở dữ liệu: MySQL / MariaDB
+- Công cụ: Visual Studio Code, MySQL Workbench
+
+Lưu ý: các thẻ ảnh trong file gốc trỏ tới tài nguyên bên ngoài. Nếu bạn có ảnh chụp màn hình, hãy đặt chúng vào `assets/images/` và đặt tên rõ ràng (ví dụ `login.png`, `admin-dashboard.png`, `schedule.png`, ...). Tôi để sẵn chỗ dành cho các ảnh mẫu bên dưới.
+
+🚀 3. Hình ảnh các chức năng (thay bằng ảnh của bạn)
+
+Trang đăng nhập
+![Trang đăng nhập](../images/login.png)
+
+Trang quản trị viên
+![Trang quản trị viên](../images/admin-dashboard.png)
+
+Trang lịch học
+![Lịch học](../images/schedule.png)
+
+Trang ghi chú
+![Ghi chú](../images/notes.png)
+
+Trang mục tiêu
+![Mục tiêu](../images/goals.png)
+
+## ⚙️ 4. Cài đặt
+
+4.1. Cài đặt công cụ, môi trường và các thư viện cần thiết
+
+- Tải và cài đặt XAMPP: https://www.apachefriends.org/download.html (khuyến nghị PHP 8.x)
+- Cài Visual Studio Code và extension: PHP Intelephense, MySQL
+
+4.2. Tải dự án
+
+Clone project về thư mục `htdocs` của XAMPP (ví dụ ổ C:)
+
+```bash
+cd C:\\xampp\\htdocs
+git clone https://github.com/Hung17082005/BTL_Quan_ly_hoc_tap.git
+```
+
+4.3. Thiết lập cơ sở dữ liệu
+
+Mở Control Panel XAMPP, khởi động Apache và MySQL.
+
+Ví dụ tạo database (MySQL):
+
+```sql
+CREATE DATABASE IF NOT EXISTS quan_ly_doan_vien
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+```
+
+4.4. Cấu hình kết nối (bảo mật)
+
+Mở file `db.php` trong dự án và chỉnh các thông số kết nối cho phù hợp với môi trường của bạn.
+
+PHẦN NGUYÊN MẪU (không lưu mật khẩu thẳng trong repo):
+
+```php
+<?php
+function getDbConnection() {
+    $servername = "localhost";
+    $username = "root";
+    // Không để mật khẩu thật trong file này khi commit vào repo.
+    // Thay bằng biến môi trường hoặc file cấu hình riêng (.env)
+    $password = getenv('DB_PASSWORD') ?: 'YOUR_DB_PASSWORD';
+    $dbname = "btl";
+    $port = 3306;
+    $conn = mysqli_connect($servername, $username, $password, $dbname, $port);
+    if (!$conn) {
+        die("Kết nối database thất bại: " . mysqli_connect_error());
+    }
+    mysqli_set_charset($conn, "utf8");
+    return $conn;
+}
+?>
+```
+
+Hướng dẫn nhanh: tạo file `.env` (không commit) hoặc cấu hình biến môi trường `DB_PASSWORD` trên máy dev.
+
+4.5. Chạy hệ thống
+
+Mở Control Panel XAMPP → khởi động Apache và MySQL.
+
+Truy cập hệ thống: http://localhost/btl/index.php?page=dashboard
+
+4.6. Đăng nhập lần đầu
+
+Hệ thống có thể có tài khoản quản trị sẵn. Sau khi đăng nhập, tài khoản quản trị có thể:
+
+- Tạo / sửa / xóa lịch học
+- Thêm thành viên, cấp tài khoản
+
+---
+
+Ghi chú về ảnh: Khi bạn có ảnh, upload vào `assets/images/` và gửi tên file (ví dụ `login.png`). Tôi sẽ cập nhật README để sử dụng ảnh đó.
+
+An toàn: mật khẩu DB gốc trong file README đã được thay bằng placeholder và hướng dẫn sử dụng biến môi trường.
 📖 1. Giới thiệu
 Hệ thống Quản lý học tập cá nhân được xây dựng nhằm hỗ trợ công tác quản lý, giám sát và đánh giá hoạt động của sinh viên hoặc học sinh. Hệ thống giúp
 các bạn chủ động trong việc sắp xếp thời gian để không bỏ qua kiến thức.
