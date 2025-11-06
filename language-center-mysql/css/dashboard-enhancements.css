@@ -1,0 +1,224 @@
+/* Enhanced Dashboard Styles */
+.hero-banner {
+    background: linear-gradient(135deg, #f6f8ff 0%, #f1f5ff 100%);
+    margin-bottom: 2rem;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #2563eb, #0ea5e9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* Make stats bigger */
+.stat-compact {
+    padding: 2rem !important;
+    height: 100%;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    transition: transform 0.2s;
+}
+
+.stat-compact:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.stat-number {
+    font-size: 2.5rem !important;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+}
+
+/* Make quick actions more prominent */
+.quick-actions {
+    gap: 1rem !important;
+}
+
+.action-tile {
+    padding: 1.5rem !important;
+    border-radius: 12px !important;
+    transition: all 0.2s;
+}
+
+.action-tile:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.tile-icon i {
+    font-size: 2rem;
+}
+
+.tile-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Enhance recent activities */
+.activity-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1rem;
+}
+
+.activity-list li:last-child {
+    border: none;
+}
+
+/* Make language icons bigger */
+.language-icons {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.language-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.language-icon i {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.language-icon span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Chart enhancements */
+canvas {
+    margin: 2rem 0;
+}
+
+/* Card enhancements */
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Header size increase */
+.header-inner {
+    padding: 1.5rem 2rem !important;
+}
+
+.featured-courses.horizontal-scroll {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+}
+.course-card {
+    min-width: 320px;
+    flex: 0 0 320px;
+}
+
+/* Super hero styles */
+.super-hero {
+    background: linear-gradient(135deg, rgba(14,165,183,0.06), rgba(99,102,241,0.04));
+    border-radius: 14px;
+    padding: 28px 18px;
+    margin-bottom: 18px;
+}
+.super-hero .hero-inner { align-items: center; }
+.hero-title{
+    font-size: 2.25rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #0f172a;
+    margin: 0 0 6px 0;
+}
+.hero-sub{ color: #475569; font-size:1rem; margin:0 }
+.hero-ctas .btn-lg{ padding: .6rem 1.1rem; font-size:1rem }
+.hero-visual .visual-card{ display:flex; align-items:center; justify-content:center; }
+
+/* Make header sticky and subtle backdrop */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    backdrop-filter: blur(6px) saturate(120%);
+    background-color: rgba(255,255,255,0.6);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+/* Remove extra white band above dashboard hero when header overlaps */
+.dashboard-hero{ margin-top: -12px; }
+
+@media (max-width: 768px){
+  .hero-title{ font-size:1.4rem }
+  .hero-visual{ display:none }
+  .super-hero{ padding:18px }
+}
+
+.header-actions .search-form input {
+    height: 45px;
+    min-width: 300px;
+    font-size: 1.1rem;
+    padding: 0 1.5rem;
+    border-radius: 10px;
+}
+
+.header-actions .btn {
+    height: 45px;
+    padding: 0 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
+}
+
+/* Container width */
+.container-fluid {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .brand-title h1 {
+        font-size: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem !important;
+    }
+    
+    .language-icons {
+        gap: 1rem;
+    }
+    
+    .header-actions .search-form input {
+        min-width: 200px;
+    }
+}

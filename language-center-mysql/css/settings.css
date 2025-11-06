@@ -1,0 +1,93 @@
+/* Settings page styles */
+.settings-wrapper {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.settings-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.settings-content {
+    flex-grow: 1;
+}
+
+.settings-nav-title {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.settings-header {
+    margin-bottom: 2rem;
+}
+
+.settings-header h4 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.list-group-item {
+    border: none;
+    padding: 0.75rem 1rem;
+    color: #495057;
+    background: transparent;
+    border-radius: 8px !important;
+    margin-bottom: 0.25rem;
+}
+
+.list-group-item:hover {
+    background: rgba(0,0,0,0.04);
+}
+
+.list-group-item.active {
+    background: #f8f9fa;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.list-group-item i {
+    font-size: 1.25rem;
+}
+
+.settings-form .form-label {
+    margin-bottom: 0.5rem;
+}
+
+.settings-form .form-control,
+.settings-form .form-select {
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+.settings-form .form-text {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.settings-form .form-check-input {
+    width: 2.5rem;
+    height: 1.25rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .settings-wrapper {
+        flex-direction: column;
+    }
+    
+    .settings-sidebar {
+        width: 100%;
+    }
+    
+    .settings-content {
+        width: 100%;
+    }
+}

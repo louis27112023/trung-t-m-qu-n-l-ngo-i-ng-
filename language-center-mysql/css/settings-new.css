@@ -1,0 +1,190 @@
+/* New Settings Page Styles */
+.settings-container {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.settings-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.settings-breadcrumb a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.settings-breadcrumb i {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+.btn-add-setting {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.settings-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.settings-card:hover {
+    transform: translateY(-2px);
+}
+
+.settings-card .card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: white;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.card-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.card-icon i {
+    font-size: 1.5rem;
+}
+
+.bg-soft-primary {
+    background: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary);
+}
+
+.bg-soft-success {
+    background: rgba(25, 135, 84, 0.1);
+    color: #198754;
+}
+
+.bg-soft-info {
+    background: rgba(13, 202, 240, 0.1);
+    color: #0dcaf0;
+}
+
+.bg-soft-warning {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+}
+
+.settings-card h5 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.settings-card .card-body {
+    padding: 1.25rem;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.setting-item:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+
+.setting-item:first-child {
+    padding-top: 0;
+}
+
+.item-content {
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.item-content label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.item-content p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.setting-input {
+    min-width: 140px;
+}
+
+.form-check-input {
+    width: 3rem !important;
+    height: 1.5rem !important;
+}
+
+.form-select[multiple] {
+    height: auto;
+    min-height: 120px;
+}
+
+/* Toast Styles */
+.toast {
+    z-index: 1050;
+}
+
+.toast-success {
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+    color: #0f5132;
+}
+
+.toast-error {
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    color: #842029;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .settings-container {
+        padding: 1rem;
+    }
+    
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .setting-item {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .setting-input {
+        width: 100%;
+    }
+}

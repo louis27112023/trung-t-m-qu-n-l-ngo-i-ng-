@@ -1,0 +1,170 @@
+[2025-11-06 04:43:14] TEST WRITE
+[2025-11-06 05:11:07] POST received: action=edit_course
+POST: Array
+(
+    [action] => edit_course
+    [csrf_token] => bb6bc7354c85476ff7bbd0700a3ac47e
+    [id] => 5
+    [name] => Business English
+    [level] => Intermediate
+    [price] => 100000000
+    [duration] => 12
+    [status] => active
+)
+
+[2025-11-06 05:14:27] POST received: action=edit_course
+POST: Array
+(
+    [action] => edit_course
+    [csrf_token] => bb6bc7354c85476ff7bbd0700a3ac47e
+    [id] => 5
+    [name] => Business English
+    [level] => Intermediate
+    [price] => 1000000000
+    [duration] => 12
+    [status] => active
+)
+
+[2025-11-06 05:17:37] POST received: action=edit_course
+POST: Array
+(
+    [action] => edit_course
+    [csrf_token] => bb6bc7354c85476ff7bbd0700a3ac47e
+    [id] => 5
+    [name] => Business English
+    [level] => Intermediate
+    [price] => 1000000000
+    [duration] => 12
+    [status] => active
+)
+
+[2025-11-06 05:18:44] POST received: action=edit_course
+POST: Array
+(
+    [action] => edit_course
+    [csrf_token] => da9d75b26db3320c8e0817b969122081
+    [id] => 5
+    [name] => Business English
+    [level] => Intermediate
+    [price] => 100000000
+    [duration] => 12
+    [status] => active
+)
+
+[2025-11-06 05:26:06] POST received: action=login
+POST: Array
+(
+    [action] => login
+    [csrf_token] => da9d75b26db3320c8e0817b969122081
+    [username] => admin
+    [password] => admin
+)
+
+[2025-11-06 05:26:49] POST received: action=login
+POST: Array
+(
+    [action] => login
+    [csrf_token] => da9d75b26db3320c8e0817b969122081
+    [username] => admin
+    [password] => $10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [remember] => 1
+)
+
+[2025-11-06 05:33:27] POST received: action=login
+POST: Array
+(
+    [action] => login
+    [csrf_token] => da9d75b26db3320c8e0817b969122081
+    [username] => admin
+    [password] => $10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [remember] => 1
+)
+
+[2025-11-06 11:08:23] POST received: action=edit_course
+POST: Array
+(
+    [action] => edit_course
+    [csrf_token] => 6cb562d77643967abbee6c08fbee0e99
+    [id] => 5
+    [name] => Business English
+    [level] => Intermediate
+    [price] => 10000000
+    [duration] => 30
+    [status] => active
+)
+
+[2025-11-06 11:33:34] POST received: action=login
+POST: Array
+(
+    [action] => login
+    [csrf_token] => ffa8dbe2829af74ea83171dbf7e1ae3e
+    [username] => admin
+    [password] => $10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+)
+
+[2025-11-06 12:47:06] POST received: action=login
+POST: Array
+(
+    [action] => login
+    [csrf_token] => ffa8dbe2829af74ea83171dbf7e1ae3e
+    [username] => admin
+    [password] => $10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+)
+
+[2025-11-06 12:47:06] POST received: action=login
+POST: Array
+(
+    [action] => login
+    [csrf_token] => ffa8dbe2829af74ea83171dbf7e1ae3e
+    [username] => admin
+    [password] => $10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+)
+
+[2025-11-06 13:10:42] POST received: action=login
+POST: Array
+(
+    [action] => login
+    [csrf_token] => c909573502bf69a9ba7a0f5c4fe6ca77
+    [username] => admin
+    [password] => $10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [remember] => 1
+)
+
+[2025-11-06 13:13:59] POST received: action=login
+POST: Array
+(
+    [action] => login
+    [csrf_token] => c909573502bf69a9ba7a0f5c4fe6ca77
+    [username] => admin
+    [password] => $10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+)
+
+[2025-11-06 13:29:42] POST received: action=login
+POST: Array
+(
+    [action] => login
+    [csrf_token] => c909573502bf69a9ba7a0f5c4fe6ca77
+    [username] => admin
+    [password] => $10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [remember] => 1
+)
+
+[2025-11-06 13:29:48] POST received: action=login
+POST: Array
+(
+    [action] => login
+    [csrf_token] => c909573502bf69a9ba7a0f5c4fe6ca77
+    [username] => admin
+    [password] => $10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+    [remember] => 1
+)
+
+[2025-11-06 14:30:07] POST received: action=login
+POST: Array
+(
+    [action] => login
+    [csrf_token] => 3f45fb9995a59bf440f65d30dfc12b89
+    [username] => admin
+    [password] => $10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi
+)
+

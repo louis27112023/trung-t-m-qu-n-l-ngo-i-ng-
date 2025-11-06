@@ -1,0 +1,229 @@
+/* Minimalist Login Page */
+.login-page {
+    min-height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.login-wrapper {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.login-card {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.login-brand {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.login-brand .brand-logo {
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #000;
+    background: transparent;
+    border: 2px solid #000;
+    border-radius: 16px;
+}
+
+.login-card .card-body { 
+    padding: 2rem;
+}
+.input-with-icon {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-with-icon .input-icon {
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000;
+    font-size: 1.35rem;
+    opacity: 0.7;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-with-icon .form-control {
+    height: 52px;
+    padding-left: 48px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+.input-with-icon .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #000;
+    background: transparent;
+}
+
+.btn-primary {
+    background: #000;
+    border: none;
+    height: 52px;
+    font-weight: 500;
+    border-radius: 12px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: #000;
+    opacity: 0.9;
+}
+
+.btn-light {
+    background: transparent;
+    border: 1px solid #000;
+    color: #000;
+    height: 52px;
+    font-weight: 500;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.btn-light:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+.btn-social {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: transparent;
+    color: #000;
+    border: 1px solid #000;
+    transition: all 0.3s;
+}
+
+.btn-social:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+.btn-social i {
+    font-size: 1.35rem;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.divider-text {
+    padding: 0 1rem;
+    color: rgba(0,0,0,0.5);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.form-check-input:checked {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+/* Additional styles */
+.form-check-input {
+    width: 1.2em;
+    height: 1.2em;
+    border: 1px solid #000;
+    background-color: transparent;
+}
+
+.form-check-input:checked {
+    background-color: #000;
+    border-color: #000;
+}
+
+.form-check-label {
+    color: rgba(0,0,0,0.7);
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: rgba(0,0,0,0.7);
+}
+
+/* Flash message styling */
+.alert {
+    border: none;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background: rgba(0,0,0,0.05);
+    color: rgba(0,0,0,0.8);
+}
+
+.alert-danger {
+    background: rgba(220,38,38,0.1);
+    color: rgb(220,38,38);
+}
+
+.alert-success {
+    background: rgba(34,197,94,0.1);
+    color: rgb(34,197,94);
+}
+
+@media (max-width: 576px) {
+    .login-wrapper {
+        padding: 24px 16px;
+    }
+    
+    .login-brand {
+        margin-bottom: 2rem;
+    }
+    
+    .brand-logo {
+        width: 48px;
+        height: 48px;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+}
