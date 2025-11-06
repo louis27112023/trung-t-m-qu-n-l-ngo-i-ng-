@@ -1,6 +1,6 @@
 # Language Center — Hướng dẫn ảnh & cài đặt nhanh
 
-![Language Center Logo](language-center-logo.png)
+[![Language Center Logo](language-center-logo.png)](../../index.php)
 
 ## 1. Giới thiệu
 
@@ -19,9 +19,9 @@ Dưới đây là các ảnh tìm thấy trong thư mục (không đệ quy):
 
 - `language-center-logo.png`
 
-Preview:
+Preview (click để đến trang chủ):
 
-![language-center-logo.png](language-center-logo.png)
+[![language-center-logo.png](language-center-logo.png)](../../index.php)
 
 Ghi chú: nếu bạn muốn gán ảnh vào mục chức năng cụ thể (ví dụ: `login.png` → "Trang đăng nhập"), upload ảnh đó vào `assets/images/` và báo tên file cho tôi — tôi sẽ cập nhật README để hiển thị theo từng chức năng.
 
@@ -93,19 +93,19 @@ Lưu ý: các thẻ ảnh trong file gốc trỏ tới tài nguyên bên ngoài.
 🚀 3. Hình ảnh các chức năng (thay bằng ảnh của bạn)
 
 Trang đăng nhập
-![Trang đăng nhập](../images/login.png)
+[![Trang đăng nhập](../images/login.png)](../../index.php)
 
 Trang quản trị viên
-![Trang quản trị viên](../images/admin-dashboard.png)
+[![Trang quản trị viên](../images/admin-dashboard.png)](../../index.php)
 
 Trang lịch học
-![Lịch học](../images/schedule.png)
+[![Lịch học](../images/schedule.png)](../../index.php)
 
 Trang ghi chú
-![Ghi chú](../images/notes.png)
+[![Ghi chú](../images/notes.png)](../../index.php)
 
 Trang mục tiêu
-![Mục tiêu](../images/goals.png)
+[![Mục tiêu](../images/goals.png)](../../index.php)
 
 ## ⚙️ 4. Cài đặt
 
