@@ -48,34 +48,19 @@ Hệ thống Quản lý Đoàn viên trong trường Đại học được xây 
 </div>
 
 ## 🚀 3. Hình ảnh các chức năng
-### Trang đăng nhập
-<img width="1902" height="931" alt="image" src="https://github.com/user-attachments/assets/c982cf12-24f8-4137-8ad4-d6c8768c5e54" />
-### Trang dashboard admin
-<img width="1885" height="935" alt="image" src="https://github.com/user-attachments/assets/ef86f98f-d8aa-4bdd-8157-ee1bae6a0a09" />
-### Trang dashboard cán bộ 
-<img width="1886" height="940" alt="image" src="https://github.com/user-attachments/assets/486fc55b-6c61-46e6-9c92-ca52ad7ad1b2" />
-### Trang dashboard đoàn viên     
-<img width="1890" height="932" alt="image" src="https://github.com/user-attachments/assets/2b5e861a-8a59-4505-8149-4ceb1ec6b503" />
-### Trang quản lý liên chi đoàn 
-<img width="1901" height="939" alt="image" src="https://github.com/user-attachments/assets/f3c88b32-5c7e-4911-b977-303523e5e4e3" />
-### Trang quản lý chi đoàn
-<img width="1892" height="938" alt="image" src="https://github.com/user-attachments/assets/0ed13de0-2745-4770-b045-980c513a380d" />
-### Trang quản lý đoàn viên
-<img width="1882" height="937" alt="image" src="https://github.com/user-attachments/assets/763dbe71-4984-459f-8348-18ce505479cc" />
-### Trang quản lý lịch sử tham gia
-<img width="1882" height="937" alt="image" src="https://github.com/user-attachments/assets/3b6a90e7-e622-4cc3-ab67-3218b195f8ed" />
-### Trang quản lý đoàn phí
-<img width="1887" height="934" alt="image" src="https://github.com/user-attachments/assets/f7bcf2a8-013e-4349-9a98-80f7da9bf4b4" />
-### Trang quản lý điểm rèn luyện 
-<img width="1888" height="944" alt="image" src="https://github.com/user-attachments/assets/5a870eb0-4971-4bc1-8f8a-480bf1f79e0e" />
-### Trang quản lý sự kiện 
-<img width="1904" height="935" alt="image" src="https://github.com/user-attachments/assets/4699e1eb-95f6-4c46-be56-113dbeddc359" />
-### Trang quản lý khen thưởng
-<img width="1890" height="942" alt="image" src="https://github.com/user-attachments/assets/258a160a-410a-439c-b23e-fd11b25533b9" />
-### Trang quản lý thông báo
-<img width="1904" height="938" alt="image" src="https://github.com/user-attachments/assets/785f6833-db9a-4d3b-97f2-16097d0520c9" />
-### Trang quản lý tài khoản
-<img width="1902" height="930" alt="image" src="https://github.com/user-attachments/assets/e524b74a-090a-4de3-ad52-9db53e7b4e85" />
+
+<img width="1919" height="1135" alt="image" src="https://github.com/user-attachments/assets/67ead3cc-35a8-4d4e-a8ee-88ebeadc45e4" />
+###trang chủ 
+<img width="1899" height="1082" alt="image" src="https://github.com/user-attachments/assets/349a80ab-b083-4d54-ac3b-48d0e2340329" />
+###khóa học 
+<img width="1919" height="915" alt="image" src="https://github.com/user-attachments/assets/892fca78-5ec8-4b38-8ffd-9336481d55ff" />
+###lịch học 
+<img width="1854" height="1100" alt="image" src="https://github.com/user-attachments/assets/4ea87bcf-a7bd-43e0-8466-a81041141ff0" />
+###lớp học 
+<img width="1919" height="1106" alt="image" src="https://github.com/user-attachments/assets/956dc35d-7390-4570-8fcf-829e99554502" />
+###học viên 
+<img width="1910" height="1122" alt="image" src="https://github.com/user-attachments/assets/acc19846-0580-4c4a-9c17-55574e027ea6" />
+###giáo viên
 ## ⚙️ 4. Cài đặt
 
 ### 4.1. Cài đặt công cụ, môi trường và các thư viện cần thiết
