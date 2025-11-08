@@ -1,318 +1,106 @@
-# Language Center — Hướng dẫn ảnh & cài đặt nhanh
+<h2 align="center">
+    <a href="https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin">
+    🎓 Faculty of Information Technology (DaiNam University)
+    </a>
+</h2>
+<h2 align="center">
+    Youth Union Member Management
+</h2>
+<div align="center">
+    <p align="center">
+        <img src="docs/logo/aiotlab_logo.png" alt="AIoTLab Logo" width="170"/>
+        <img src="docs/logo/fitdnu_logo.png" alt="AIoTLab Logo" width="180"/>
+        <img src="docs/logo/dnu_logo.png" alt="DaiNam University Logo" width="200"/>
+    </p>
 
-[![Language Center Logo](language-center-logo.png)](../../index.php)
+[![AIoTLab](https://img.shields.io/badge/AIoTLab-green?style=for-the-badge)](https://www.facebook.com/DNUAIoTLab)
+[![Faculty of Information Technology](https://img.shields.io/badge/Faculty%20of%20Information%20Technology-blue?style=for-the-badge)](https://dainam.edu.vn/vi/khoa-cong-nghe-thong-tin)
+[![DaiNam University](https://img.shields.io/badge/DaiNam%20University-orange?style=for-the-badge)](https://dainam.edu.vn)
 
-## 1. Giới thiệu
+</div>
+ 
+## 📖 1. Giới thiệu
+Hệ thống Quản lý Đoàn viên trong trường Đại học được xây dựng nhằm hỗ trợ công tác quản lý, theo dõi và đánh giá hoạt động của Đoàn Thanh niên trong môi trường giáo dục đại học. Thay vì quản lý thủ công bằng giấy tờ hay các tệp Excel rời rạc, hệ thống mang đến một giải pháp tập trung, hiện đại và dễ sử dụng.
 
-Hệ thống quản lý học tập (Language Center - MySQL) hỗ trợ quản lý, giám sát và đánh giá hoạt động học tập cho học viên và giáo viên. File này mô tả nơi đặt ảnh minh họa chức năng và cách cấu hình nhanh để chạy hệ thống cục bộ.
+## 🔧 2. Các công nghệ được sử dụng
+<div align="center">
 
-## 2. Công nghệ chính (gợi ý)
+### Hệ điều hành
+![macOS](https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=macos&logoColor=F0F0F0)
+[![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/en-us/windows/)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
 
-- PHP (khuyến nghị PHP 8.x)
-- Apache (XAMPP)
-- MySQL / MariaDB
-- Visual Studio Code, MySQL Workbench
+### Công nghệ chính
+[![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#)
+[![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#)
+[![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white)](#)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 
-## 3. Giao diện trang web (thay các ảnh cũ)
+### Web Server & Database
+[![Apache](https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=apache&logoColor=white)](https://httpd.apache.org/)
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/) 
+[![XAMPP](https://img.shields.io/badge/XAMPP-FB7A24?style=for-the-badge&logo=xampp&logoColor=white)](https://www.apachefriends.org/)
+### Database Management Tools
+[![MySQL Workbench](https://img.shields.io/badge/MySQL_Workbench-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://dev.mysql.com/downloads/workbench/)
+</div>
 
-Tôi đã xóa các ảnh cũ và thay thế bằng một chỗ dành cho ảnh giao diện trang web của bạn. Để hiển thị giao diện thật, upload ảnh chụp màn hình của trang vào `assets/images/` và đặt tên là `site-ui.png` (hoặc tên khác — báo cho tôi biết tên đó).
-
-Preview giao diện (click để đến trang chủ):
-
-[![Giao diện trang chủ](site-ui.png)](../../index.php)
-
-Ví dụ: nếu bạn upload `login.png`, `admin-dashboard.png`, `schedule.png`, tôi có thể tự động chèn từng ảnh vào các mục tương ứng (Trang đăng nhập, Trang quản trị viên, Trang lịch học).
-
-## 4. Cài đặt nhanh
-
-1) Cài XAMPP (https://www.apachefriends.org/download.html) — khuyến nghị PHP 8.x.
-
-2) Clone project vào `htdocs` của XAMPP:
-
-```bash
-cd C:\\xampp\\htdocs
-git clone https://github.com/Hung17082005/BTL_Quan_ly_hoc_tap.git
-```
-
-3) Khởi động Apache và MySQL trong XAMPP.
-
-4) Tạo database (ví dụ):
-
-```sql
-CREATE DATABASE IF NOT EXISTS quan_ly_doan_vien
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_unicode_ci;
-```
-
-5) Cấu hình kết nối DB an toàn: chỉnh `db.php` hoặc dùng biến môi trường `.env` và đừng commit mật khẩu thật.
-
-Ví dụ mẫu `db.php`:
-
-```php
-<?php
-function getDbConnection() {
-    $servername = "localhost";
-    $username = "root";
-    $password = getenv('DB_PASSWORD') ?: 'YOUR_DB_PASSWORD';
-    $dbname = "btl";
-    $port = 3306;
-    $conn = mysqli_connect($servername, $username, $password, $dbname, $port);
-    if (!$conn) {
-        die("Kết nối database thất bại: " . mysqli_connect_error());
-    }
-    mysqli_set_charset($conn, "utf8");
-    return $conn;
-}
-?>
-```
-
-6) Truy cập hệ thống: http://localhost/btl/index.php?page=dashboard
-
----
-
-Ghi chú: khi bạn upload ảnh giao diện, hoặc gửi tên file, tôi sẽ chèn ảnh đó vào README ở vị trí phù hợp.
-# Language Center — Hướng dẫn ảnh & cài đặt nhanh
-
-[![Language Center Logo](language-center-logo.png)](../../index.php)
-
-## 1. Giới thiệu
-
-Hệ thống quản lý học tập (Language Center - MySQL) hỗ trợ quản lý, giám sát và đánh giá hoạt động học tập cho học viên và giáo viên. File này mô tả nơi đặt ảnh minh họa chức năng và cách cấu hình nhanh để chạy hệ thống cục bộ.
-
-## 2. Công nghệ chính (gợi ý)
-
-- PHP (khuyến nghị PHP 8.x)
-- Apache (XAMPP)
-- MySQL / MariaDB
-- Visual Studio Code, MySQL Workbench
-
-## 3. Hình ảnh các chức năng — ảnh hiện có trong `assets/images/`
-
-Dưới đây là các ảnh tìm thấy trong thư mục (không đệ quy):
-
-- `language-center-logo.png`
-
-Preview (click để đến trang chủ):
-
-[![language-center-logo.png](language-center-logo.png)](../../index.php)
-
-Ghi chú: nếu bạn muốn gán ảnh vào mục chức năng cụ thể (ví dụ: `login.png` → "Trang đăng nhập"), upload ảnh đó vào `assets/images/` và báo tên file cho tôi — tôi sẽ cập nhật README để hiển thị theo từng chức năng.
-
-## 4. Cài đặt nhanh
-
-1) Cài XAMPP (https://www.apachefriends.org/download.html) — khuyến nghị PHP 8.x.
-
-2) Clone project vào `htdocs` của XAMPP:
-
-```bash
-cd C:\\xampp\\htdocs
-git clone https://github.com/Hung17082005/BTL_Quan_ly_hoc_tap.git
-```
-
-3) Khởi động Apache và MySQL trong XAMPP.
-
-4) Tạo database (ví dụ):
-
-```sql
-CREATE DATABASE IF NOT EXISTS quan_ly_doan_vien
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_unicode_ci;
-```
-
-5) Cấu hình kết nối DB an toàn: chỉnh `db.php` hoặc dùng biến môi trường `.env` và đừng commit mật khẩu thật.
-
-Ví dụ mẫu `db.php`:
-
-```php
-<?php
-function getDbConnection() {
-    $servername = "localhost";
-    $username = "root";
-    $password = getenv('DB_PASSWORD') ?: 'YOUR_DB_PASSWORD';
-    $dbname = "btl";
-    $port = 3306;
-    $conn = mysqli_connect($servername, $username, $password, $dbname, $port);
-    if (!$conn) {
-        die("Kết nối database thất bại: " . mysqli_connect_error());
-    }
-    mysqli_set_charset($conn, "utf8");
-    return $conn;
-}
-?>
-```
-
-6) Truy cập hệ thống: http://localhost/btl/index.php?page=dashboard
-
----
-
-Nếu bạn đã upload thêm ảnh, báo cho tôi tên file (hoặc chọn tự động: tôi sẽ quét và thêm vào README). Tôi có thể tự động sắp xếp chúng theo tên file nếu bạn muốn (ví dụ `login.png` → Trang đăng nhập).
-
-![Language Center Logo](language-center-logo.png)
-
-📖 1. Giới thiệu
-
-Hệ thống quản lý học tập (Language Center - MySQL) này được xây dựng để hỗ trợ quản lý, giám sát và đánh giá hoạt động học tập cho học viên và giáo viên. README này mô tả cách cài đặt, cấu hình cơ bản và nơi đặt ảnh minh họa chức năng.
-
-🔧 2. Các công nghệ (gợi ý)
-
-- Hệ điều hành: Windows / Linux
-- PHP (khuyến nghị PHP 8.x)
-- Web server: Apache (XAMPP)
-- Cơ sở dữ liệu: MySQL / MariaDB
-- Công cụ: Visual Studio Code, MySQL Workbench
-
-Lưu ý: các thẻ ảnh trong file gốc trỏ tới tài nguyên bên ngoài. Nếu bạn có ảnh chụp màn hình, hãy đặt chúng vào `assets/images/` và đặt tên rõ ràng (ví dụ `login.png`, `admin-dashboard.png`, `schedule.png`, ...). Tôi để sẵn chỗ dành cho các ảnh mẫu bên dưới.
-
-
-
-
+## 🚀 3. Hình ảnh các chức năng
+<img width="1919" height="1135" alt="image" src="https://github.com/user-attachments/assets/9ba5ea4e-4628-4041-b844-d8e9218c3c3b" />
+###trang chủ 
+<img width="1899" height="1082" alt="image" src="https://github.com/user-attachments/assets/0e0c83fa-9e09-4b16-8e4a-c84a3c7e43b5" />
+###khóa học 
+<img width="1919" height="915" alt="image" src="https://github.com/user-attachments/assets/da59c926-2a08-4fc8-9d8d-31691a3db2ea" />
+###lịch học 
+<img width="1854" height="1100" alt="image" src="https://github.com/user-attachments/assets/98af51f7-73f5-42f5-b8a7-bf8d432e53cb" />
+###lớp học 
+<img width="1919" height="1106" alt="image" src="https://github.com/user-attachments/assets/cf5e7a34-ceb1-40cd-b136-29f72d94598e" />
+###học viên 
+<img width="1910" height="1122" alt="image" src="https://github.com/user-attachments/assets/956fccc4-c4fb-4cac-b197-bc636e4a4565" />
+###giáo viên 
 ## ⚙️ 4. Cài đặt
 
-4.1. Cài đặt công cụ, môi trường và các thư viện cần thiết
+### 4.1. Cài đặt công cụ, môi trường và các thư viện cần thiết
 
-- Tải và cài đặt XAMPP: https://www.apachefriends.org/download.html (khuyến nghị PHP 8.x)
-- Cài Visual Studio Code và extension: PHP Intelephense, MySQL
+- Tải và cài đặt **XAMPP**  
+  👉 https://www.apachefriends.org/download.html  
+  (Khuyến nghị bản XAMPP với PHP 8.x)
 
-4.2. Tải dự án
-
-Clone project về thư mục `htdocs` của XAMPP (ví dụ ổ C:)
+- Cài đặt **Visual Studio Code** và các extension:
+  - PHP Intelephense  
+  - MySQL  
+  - Prettier – Code Formatter  
+### 4.2. Tải project
+Clone project về thư mục `htdocs` của XAMPP (ví dụ ổ C):
 
 ```bash
-cd C:\\xampp\\htdocs
-git clone https://github.com/Hung17082005/BTL_Quan_ly_hoc_tap.git
-```
-
-4.3. Thiết lập cơ sở dữ liệu
-
-Mở Control Panel XAMPP, khởi động Apache và MySQL.
-
-Ví dụ tạo database (MySQL):
-
-```sql
-CREATE DATABASE IF NOT EXISTS quan_ly_doan_vien
-  CHARACTER SET utf8mb4
-  COLLATE utf8mb4_unicode_ci;
-```
-
-4.4. Cấu hình kết nối (bảo mật)
-
-Mở file `db.php` trong dự án và chỉnh các thông số kết nối cho phù hợp với môi trường của bạn.
-
-PHẦN NGUYÊN MẪU (không lưu mật khẩu thẳng trong repo):
-
-```php
-<?php
-function getDbConnection() {
-    $servername = "localhost";
-    $username = "root";
-    // Không để mật khẩu thật trong file này khi commit vào repo.
-    // Thay bằng biến môi trường hoặc file cấu hình riêng (.env)
-    $password = getenv('DB_PASSWORD') ?: 'YOUR_DB_PASSWORD';
-    $dbname = "btl";
-    $port = 3306;
-    $conn = mysqli_connect($servername, $username, $password, $dbname, $port);
-    if (!$conn) {
-        die("Kết nối database thất bại: " . mysqli_connect_error());
-    }
-    mysqli_set_charset($conn, "utf8");
-    return $conn;
-}
-?>
-```
-
-Hướng dẫn nhanh: tạo file `.env` (không commit) hoặc cấu hình biến môi trường `DB_PASSWORD` trên máy dev.
-
-4.5. Chạy hệ thống
-
-Mở Control Panel XAMPP → khởi động Apache và MySQL.
-
-Truy cập hệ thống: http://localhost/btl/index.php?page=dashboard
-
-4.6. Đăng nhập lần đầu
-
-Hệ thống có thể có tài khoản quản trị sẵn. Sau khi đăng nhập, tài khoản quản trị có thể:
-
-- Tạo / sửa / xóa lịch học
-- Thêm thành viên, cấp tài khoản
-
----
-
-Ghi chú về ảnh: Khi bạn có ảnh, upload vào `assets/images/` và gửi tên file (ví dụ `login.png`). Tôi sẽ cập nhật README để sử dụng ảnh đó.
-
-An toàn: mật khẩu DB gốc trong file README đã được thay bằng placeholder và hướng dẫn sử dụng biến môi trường.
-📖 1. Giới thiệu
-Hệ thống Quản lý học tập cá nhân được xây dựng nhằm hỗ trợ công tác quản lý, giám sát và đánh giá hoạt động của sinh viên hoặc học sinh. Hệ thống giúp
-các bạn chủ động trong việc sắp xếp thời gian để không bỏ qua kiến thức.
-
-🔧 2. Các công nghệ được sử dụng
-Hệ điều hành
-<img width="93" height="28" alt="image" src="https://github.com/user-attachments/assets/b2485204-99c1-496e-b323-28d2c0090848" />
-
-Công nghệ chính
-<img width="71" height="28" alt="image" src="https://github.com/user-attachments/assets/1b295979-610f-4868-90e3-7034e8076e3c" />
-<img width="88" height="28" alt="image" src="https://github.com/user-attachments/assets/90f26b5c-3f68-417a-b88a-75451568b0eb" />
-<img width="49" height="28" alt="image" src="https://github.com/user-attachments/assets/b91d9813-5d22-470c-877c-b3120aab634e" />
-<img width="123" height="28" alt="image" src="https://github.com/user-attachments/assets/5afa5cb3-d384-4f80-9d66-257c09ceb38a" />
-
-Máy chủ web và cơ sở dữ liệu
-<img width="97" height="28" alt="image" src="https://github.com/user-attachments/assets/de87f281-b70f-442b-8651-b5b478771a3f" />
-<img width="88" height="28" alt="image" src="https://github.com/user-attachments/assets/afe0ea66-3561-49a0-a733-4a7ee3de4fdd" />
-<img width="89" height="28" alt="image" src="https://github.com/user-attachments/assets/c9276a9e-2e5a-4ffc-a948-827e41b12c1d" />
-
-Công cụ quản lý cơ sở dữ liệu
-<img width="179" height="28" alt="image" src="https://github.com/user-attachments/assets/b8f9a20d-65dc-4e73-91c8-5d4177ceedcb" />
-
-🚀 3. Hình ảnh các chức năng
-Trang đăng nhập
-<img width="1919" height="983" alt="image" src="https://github.com/user-attachments/assets/6da124b9-90b7-4358-a713-47ff8259acda" />
-
-Trang quản trị viên
-<img width="1897" height="977" alt="image" src="https://github.com/user-attachments/assets/e3523d4d-ea78-4b3f-8512-2705fe9d8911" />
-
-Trang lịch học
-<img width="1906" height="503" alt="image" src="https://github.com/user-attachments/assets/f39469d9-74f3-43d1-bcb6-34f92b3bd548" />
-
-Trang ghi chú 
-<img width="1916" height="428" alt="image" src="https://github.com/user-attachments/assets/75ab34b1-1f2f-4f9b-add2-6ac0dfdf70e9" />
-
-Trang mục tiêu
-<img width="1916" height="192" alt="image" src="https://github.com/user-attachments/assets/f645c128-61fd-44a3-bb2a-1e4669700b03" />
-
-## ⚙️ 4. Cài đặt
-4.1. Cài đặt công cụ, môi trường và các thư viện cần thiết
-Tải và cài đặt XAMPP
-👉 https://www.apachefriends.org/download.html
-(Khuyến nghị bản XAMPP với PHP 8.x)
-
-Cài đặt Visual Studio Code và các tiện ích mở rộng:
-
-PHP Intelephense
-MySQL
-
-4.2. Tải dự án
-Clone project về thư mục htdocscủa XAMPP (ví dụ ổ C):
 cd C:\xampp\htdocs
+https://github.com/tyanzuq2811/BTL_Quan_ly_doan_vien.git
 Truy cập project qua đường dẫn:
-👉 ((https://github.com/Hung17082005/BTL_Quan_ly_hoc_tap)
+👉 http://localhost/authentication_login.
+```
+### 4.3. Setup database
+Mở XAMPP Control Panel, Start Apache và MySQL
 
-4.3. Thiết lập cơ sở dữ liệu
-Mở Control Panel XAMPP, Khởi động Apache và MySQL
-
-Truy cập cơ sở dữ liệu MySQL WorkBench Create:
-
+Truy cập MySQL WorkBench
+Tạo database:
+```bash
 CREATE DATABASE IF NOT EXISTS quan_ly_doan_vien
    CHARACTER SET utf8mb4
    COLLATE utf8mb4_unicode_ci;
+```
 
-4.4. Setup kết nối tham số
-Mở file db.php trong dự án, chỉnh sửa DB thông tin:
+### 4.4. Setup tham số kết nối
+Mở file config.php (hoặc .env) trong project, chỉnh thông tin DB:
+```bash
 
 <?php
     function getDbConnection() {
         $servername = "localhost";
         $username = "root";
-        $password = "100725";
-        $dbname = "btl";
+        $password = "";
+        $dbname = "quan_ly_doan_vien";
         $port = 3306;
         $conn = mysqli_connect($servername, $username, $password, $dbname, $port);
         if (!$conn) {
@@ -322,16 +110,11 @@ Mở file db.php trong dự án, chỉnh sửa DB thông tin:
         return $conn;
     }
 ?>
-4.5. Chạy hệ thống
-Mở Control Panel XAMPP → Khởi động Apache và MySQL
+```
+### 4.5. Chạy hệ thống
+Mở XAMPP Control Panel → Start Apache và MySQL
 
-Truy cập hệ thống: 👉(http://localhost/btl/index.php?page=dashboard)
+Truy cập hệ thống:
+👉 http://localhost/index.php
 
-4.6. Đăng nhập lần đầu
-Hệ thống có thể cung cấp tài khoản quản trị viên
-
-Sau khi đăng nhập Quản trị viên có thể:
-
-Tạo lịch học, sửa xóa ghi chú mà mục tiêu
-
-Thêm thành viên và cấp tài khoản
+### 4.6. Đăng nhập lần đầu
