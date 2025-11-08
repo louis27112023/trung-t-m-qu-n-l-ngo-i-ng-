@@ -20,7 +20,7 @@
 </div>
  
 ## 📖 1. Giới thiệu
-Hệ thống Quản lý Đoàn viên trong trường Đại học được xây dựng nhằm hỗ trợ công tác quản lý, theo dõi và đánh giá hoạt động của Đoàn Thanh niên trong môi trường giáo dục đại học. Thay vì quản lý thủ công bằng giấy tờ hay các tệp Excel rời rạc, hệ thống mang đến một giải pháp tập trung, hiện đại và dễ sử dụng.
+Hệ thống Quản lý Trung tâm Ngoại ngữ là một ứng dụng web được xây dựng nhằm hỗ trợ các trung tâm đào tạo ngôn ngữ quản lý thông tin một cách hiệu quả hơn. Thay vì phải ghi chép bằng Excel hoặc sổ sách thủ công, hệ thống giúp tin học hóa toàn bộ quy trình quản lý như: quản lý học viên, khóa học, giáo viên, lớp học và học phí.
 
 ## 🔧 2. Các công nghệ được sử dụng
 <div align="center">
@@ -88,7 +88,7 @@ Mở XAMPP Control Panel, Start Apache và MySQL
 Truy cập MySQL WorkBench
 Tạo database:
 ```bash
-CREATE DATABASE IF NOT EXISTS quan_ly_doan_vien
+CREATE DATABASE IF NOT EXISTS nna
    CHARACTER SET utf8mb4
    COLLATE utf8mb4_unicode_ci;
 ```
@@ -102,7 +102,7 @@ Mở file config.php (hoặc .env) trong project, chỉnh thông tin DB:
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "quan_ly_doan_vien";
+        $dbname = "nna";
         $port = 3306;
         $conn = mysqli_connect($servername, $username, $password, $dbname, $port);
         if (!$conn) {
@@ -123,10 +123,12 @@ Truy cập hệ thống:
 Hệ thống có thể cấp tài khoản admin 
 
 Sau khi đăng nhập Admin có thể:
+Quản lý học viên
 
-Tạo thông tin tổ chức đoàn (Đoàn trường, Liên chi, Chi đoàn)
+Quản lý khoá học và lớp học
 
-Thêm đoàn viên và cấp tài khoản
+Quản lý giáo viên
 
-Quản lý phân quyền theo cấp
-    
+Quản lý điểm và quá trình học
+
+Quản lý thu học phí và báo cáo tài chính
